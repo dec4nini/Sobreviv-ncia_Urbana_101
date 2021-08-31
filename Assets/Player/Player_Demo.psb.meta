@@ -700,13 +700,13 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 2, y: 0, z: 7, w: 5}
     rect:
       serializedVersion: 2
       x: 265
-      y: 91
-      width: 75
-      height: 48
+      y: 89
+      width: 78
+      height: 51
     spriteID: 09a37a51c0ac2d9418fc2cc7038d34f3
     internalID: 0
     spriteBone: []
@@ -722,13 +722,13 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 31, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 186
+      x: 195
       y: 4
-      width: 82
-      height: 76
+      width: 68
+      height: 75
     spriteID: 7a862f3dfafa2984588b97bc22c148df
     internalID: 0
     spriteBone: []
@@ -744,13 +744,13 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 22, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 276
       y: 4
-      width: 67
-      height: 68
+      width: 68
+      height: 67
     spriteID: 21a443e21183bad438309fc9552e38b8
     internalID: 0
     spriteBone: []
@@ -766,13 +766,13 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 1}
     rect:
       serializedVersion: 2
       x: 351
-      y: 4
-      width: 67
-      height: 68
+      y: 26
+      width: 68
+      height: 46
     spriteID: b7d424428381266448def1ce7197684a
     internalID: 0
     spriteBone: []
@@ -792,9 +792,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 348
-      y: 91
-      width: 67
-      height: 48
+      y: 92
+      width: 68
+      height: 46
     spriteID: 24295c2756bfe8e40a787d4ac806f942
     internalID: 0
     spriteBone: []
@@ -813,10 +813,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 83
-      height: 79
+      x: 19
+      y: 38
+      width: 68
+      height: 45
     spriteID: 64d5cc37df0b13f4285dfe3722c7a04d
     internalID: 0
     spriteBone: []
@@ -835,10 +835,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 95
-      y: 4
-      width: 83
-      height: 79
+      x: 110
+      y: 38
+      width: 68
+      height: 45
     spriteID: fbcdf51137855ec429719477ae5bd097
     internalID: 0
     spriteBone: []

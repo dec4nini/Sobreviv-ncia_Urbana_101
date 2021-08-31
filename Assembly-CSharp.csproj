@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>4.9.1.0</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>4.11.3.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2019.4.21f1</UnityVersion>
@@ -86,8 +86,9 @@
     <Compile Include="Assets\Samples\Cinemachine\2.6.5\Cinemachine Example Scenes\Shared\Scripts\PlayerMoveOnSphere.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.5\Cinemachine Example Scenes\Shared\Scripts\PlayerMovePhysics.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.5\Cinemachine Example Scenes\Shared\Scripts\SpawnInCircle.cs" />
-    <Compile Include="Assets\Scripts\CameraMove.cs" />
+    <Compile Include="Assets\Scripts\CameraMovement2D.cs" />
     <Compile Include="Assets\Scripts\CreationMenu.cs" />
+    <Compile Include="Assets\Scripts\NPC_Movement.cs" />
     <Compile Include="Assets\Scripts\OutfitChanger.cs" />
     <Compile Include="Assets\Scripts\Player_Movement.cs" />
     <None Include="Assets\Samples\Cinemachine\2.6.5\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />
