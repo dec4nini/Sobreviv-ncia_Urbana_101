@@ -1,4 +1,27 @@
-Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data/PlaybackEngines'
+Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.29f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.29f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
-
-Quitting shader compiler process
+Cmd: compileComputeKernel
+  api=4 insize=18785 outsize=8653 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18785 outsize=10338 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1613 outsize=1455 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5194 outsize=3708 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3278 outsize=47803 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=11230 outsize=9684 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2174 outsize=1000 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2242 outsize=1515 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3348 outsize=1324 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2519 outsize=1414 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5091 outsize=1166 kw=USE_ADDITIVE_BLENDING pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=9332 outsize=2958 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: shutdown
