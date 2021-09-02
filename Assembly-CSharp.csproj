@@ -56,6 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MiniGames\Scripts\LevelController.cs" />
+    <Compile Include="Assets\MiniGames\Scripts\LevelControllerSP.cs" />
+    <Compile Include="Assets\MiniGames\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\MiniGames\Scripts\PlayerControllerSP.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.5\Cinemachine Example Scenes\Scenes\3rdPersonWithAimMode\ActivateOnKeypress.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.5\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerLookAt.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.5\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerMovement.cs" />
