@@ -56,7 +56,7 @@ public class LevelControllerSP : MonoBehaviour
                 gameKeysSP3.Add(keysSP[UnityEngine.Random.Range(0, keysSP.Length)]);
             }
         }
-        
+        yield return new WaitForSeconds(0.25f);
 
         for (int i = 0; i < player1Images.Length; i++)
         {

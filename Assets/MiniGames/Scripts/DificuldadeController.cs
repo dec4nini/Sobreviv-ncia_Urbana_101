@@ -6,6 +6,7 @@ public class DificuldadeController : MonoBehaviour
 {
     public GameObject[] levelsController;
     public GameObject[] canvasGame;
+    public GameObject[] Players;
 
     public int dificuldade;
     // Start is called before the first frame update
@@ -13,6 +14,7 @@ public class DificuldadeController : MonoBehaviour
     {
         levelsController[dificuldade].SetActive(true);
         canvasGame[dificuldade].SetActive(true);
+        Players[dificuldade].SetActive(true);
     }
 
     // Update is called once per frame

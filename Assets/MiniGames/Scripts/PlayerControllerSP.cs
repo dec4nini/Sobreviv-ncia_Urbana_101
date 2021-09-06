@@ -6,7 +6,8 @@ public class PlayerControllerSP : MonoBehaviour
 {
     public Animator anim;
     public int id = 1;
-    private int keyIndex = 4;
+    public int keyIndex;
+    public int keyIndexMax;
     private bool canPlay = false;
     public int sequenciaNumero;
     private float timer;
@@ -82,7 +83,8 @@ public class PlayerControllerSP : MonoBehaviour
         {
             id++;
             sequenciaNumero--;
-            keyIndex = 4;
+            keyIndex = keyIndexMax;
+            
             LevelControllerSP.instance.RestartSequencia(id);
         }
     }
