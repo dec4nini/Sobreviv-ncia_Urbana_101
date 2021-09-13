@@ -20,6 +20,8 @@ public class LevelController : MonoBehaviour
     public Keys[] keys;
 
     public List<Keys> gameKeys;
+    public List<Keys> gameKeys2;
+    public List<Keys> gameKeys3;
 
     public Image[] player1Images;
     public Image[] player2Images;
@@ -32,7 +34,7 @@ public class LevelController : MonoBehaviour
 
     public RectTransform[] cursor;
 
-    public bool canPlay = false;
+    public bool[] canPlay;
 
     public GameObject restartButton;
     private void Awake()
@@ -43,34 +45,105 @@ public class LevelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartingKeys());
+        
+        StartCoroutine(StartingKeys(1, 0));
+        StartCoroutine(StartingKeys(1, 1));
+        
     }
 
     // Update is called once per frame
 
-    IEnumerator StartingKeys() 
+    IEnumerator StartingKeys(int seq, int player) 
     {
+        canPlay[player] = false;
+        //PlayerController.instance.playBool(false, player);
+        if (seq == 1) 
+        {
+            for (int i = 0; i < player1Images.Length; i++)
+            {
+                gameKeys.Add(keys[UnityEngine.Random.Range(0, keys.Length)]);
+                gameKeys2.Add(keys[UnityEngine.Random.Range(0, keys.Length)]);
+                gameKeys3.Add(keys[UnityEngine.Random.Range(0, keys.Length)]);
+            }
+        }
+        yield return new WaitForSeconds(0.25f);
         for (int i = 0; i < player1Images.Length; i++)
         {
-            for (int y = 0; y < cursor.Length; y++)
+            if (player == 0)
             {
-                cursor[y].anchoredPosition = new Vector2(cursor[y].anchoredPosition.x, cursor[y].anchoredPosition.y + 45);
+                if (seq == 1)
+                {
+
+                    cursor[0].anchoredPosition = new Vector2(cursor[0].anchoredPosition.x, cursor[0].anchoredPosition.y + 45);
+                    
+                    player1Images[i].sprite = gameKeys[i].keySprite;
+                    player1Images[i].preserveAspect = true;
+                    player1Images[i].enabled = true;
+
+                    yield return new WaitForSeconds(0.25f);
+                }
+                else if (seq == 2)
+                {
+                    cursor[0].anchoredPosition = new Vector2(cursor[0].anchoredPosition.x, cursor[0].anchoredPosition.y + 45);
+
+                    player1Images[i].sprite = gameKeys2[i].keySprite;
+                    player1Images[i].preserveAspect = true;
+                    player1Images[i].enabled = true;
+
+                    yield return new WaitForSeconds(0.25f);
+                }
+                else if (seq == 3)
+                {
+                    cursor[0].anchoredPosition = new Vector2(cursor[0].anchoredPosition.x, cursor[0].anchoredPosition.y + 45);
+
+                    player1Images[i].sprite = gameKeys3[i].keySprite;
+                    player1Images[i].preserveAspect = true;
+                    player1Images[i].enabled = true;
+
+                    yield return new WaitForSeconds(0.25f);
+                }
+            }
+            else 
+            {
+                if (seq == 1)
+                {
+                    cursor[1].anchoredPosition = new Vector2(cursor[1].anchoredPosition.x, cursor[1].anchoredPosition.y + 45);
+
+                    player2Images[i].sprite = gameKeys[i].keySprite;
+                    player2Images[i].preserveAspect = true;
+                    player2Images[i].enabled = true;
+
+                    yield return new WaitForSeconds(0.25f);
+                }
+                else if (seq == 2)
+                {
+                    cursor[1].anchoredPosition = new Vector2(cursor[1].anchoredPosition.x, cursor[1].anchoredPosition.y + 45);
+
+                    player2Images[i].sprite = gameKeys2[i].keySprite;
+                    player2Images[i].preserveAspect = true;
+                    player2Images[i].enabled = true;
+
+                    yield return new WaitForSeconds(0.25f);
+                }
+                else if (seq == 3)
+                {
+                    cursor[1].anchoredPosition = new Vector2(cursor[1].anchoredPosition.x, cursor[1].anchoredPosition.y + 45);
+
+                    player2Images[i].sprite = gameKeys3[i].keySprite;
+                    player2Images[i].preserveAspect = true;
+                    player2Images[i].enabled = true;
+
+                    yield return new WaitForSeconds(0.25f);
+                }
             }
 
-            gameKeys.Add(keys[UnityEngine.Random.Range(0, keys.Length)]);
-            player1Images[i].sprite = gameKeys[i].keySprite;
-            player1Images[i].preserveAspect = true;
-            player1Images[i].enabled = true;
-
-            player2Images[i].sprite = gameKeys[i].keySprite;
-            player2Images[i].preserveAspect = true;
-            player2Images[i].enabled = true;
-            yield return new WaitForSeconds(0.25f);
         }
 
-        canPlay = true;
+        
         messageText.text = "Go";
         StartCoroutine(Fading(messageText));
+        canPlay[player] = true;
+        //PlayerController.instance.playBool(true, player);
     }
 
     IEnumerator Fading(Text text) 
@@ -95,6 +168,11 @@ public class LevelController : MonoBehaviour
         {
             player2Images[keyIndex].enabled = false;
         }
+    }
+
+    public void RestartSequencia(int seq, int player)
+    {
+        StartCoroutine(StartingKeys(seq, player));
     }
 
     public void UpdatePlayerTime(float time, int player) 

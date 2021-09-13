@@ -46,6 +46,7 @@ public class LevelControllerSP : MonoBehaviour
 
     IEnumerator StartingKeys(int id)
     {
+        canPlay = false;
         if (id == 1) 
         {
             for (int i = 0; i < player1Images.Length; i++)

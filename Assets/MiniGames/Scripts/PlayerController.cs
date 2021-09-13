@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     public int playerIndex;
     public Animator anim;
 
     private int keyIndex = 8;
-    private bool canPlay = false;
+    public bool canPlay;
 
     private float timer;
     private float nextkeyTime;
+
+    private int numSeq = 1;
+    private int sequencia = 2;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        while (LevelController.instance.canPlay == false)
+        while (LevelController.instance.canPlay[playerIndex] == false)
         {
             yield return null;
         }
@@ -27,14 +36,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canPlay == false) 
-        {
-            return;
-        }
-
+        
         timer += Time.deltaTime;
 
-        if (playerIndex == 1) 
+        if (playerIndex == 1 && LevelController.instance.canPlay[playerIndex] == true) 
         {
             if (Time.time > nextkeyTime) 
             {
@@ -43,14 +48,38 @@ public class PlayerController : MonoBehaviour
             }
             return; 
         }
-
-        if (Input.GetKeyDown(LevelController.instance.gameKeys[keyIndex].key))
+        if (numSeq == 1 && LevelController.instance.canPlay[playerIndex] == true)
         {
-            keyPress();
+            if (Input.GetKeyDown(LevelController.instance.gameKeys[keyIndex].key))
+            {
+                keyPress();
+            }
+            else if (Input.anyKeyDown)
+            {
+                timer += 0.1f;
+            }
+        } 
+        else if (numSeq == 2 && LevelController.instance.canPlay[playerIndex] == true) 
+        {
+            if (Input.GetKeyDown(LevelController.instance.gameKeys2[keyIndex].key))
+            {
+                keyPress();
+            }
+            else if (Input.anyKeyDown)
+            {
+                timer += 0.1f;
+            }
         }
-        else if (Input.anyKeyDown) 
+        else if (numSeq == 3 && LevelController.instance.canPlay[playerIndex] == true)
         {
-            timer += 0.1f;
+            if (Input.GetKeyDown(LevelController.instance.gameKeys3[keyIndex].key))
+            {
+                keyPress();
+            }
+            else if (Input.anyKeyDown)
+            {
+                timer += 0.1f;
+            }
         }
     }
 
@@ -59,18 +88,28 @@ public class PlayerController : MonoBehaviour
         LevelController.instance.NextKey(playerIndex, keyIndex);
         keyIndex--;
 
-        if (keyIndex < 0) 
+        if (keyIndex < 0 && sequencia == 0)
         {
-            canPlay = false;
+            LevelController.instance.canPlay[playerIndex] = false;
             LevelController.instance.UpdatePlayerTime(timer, playerIndex);
+        }
+        else if (keyIndex < 0) 
+        {
+            LevelController.instance.canPlay[playerIndex] = false;
+            numSeq++;
+            sequencia--;
+            keyIndex = 8;
+            LevelController.instance.RestartSequencia(numSeq, playerIndex);
         }
     }
 
     public void SetAnimation(string triggerAnimation) 
     {
         anim.SetTrigger(triggerAnimation);
-
-        
     }
 
+    //public void playBool(bool play, int player) 
+    //{
+    //    canPlay[player] = play;
+    //}
 }

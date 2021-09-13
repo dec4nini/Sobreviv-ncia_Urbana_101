@@ -625,6 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 1
   anim: {fileID: 1785722626}
+  canPlay: 0
 --- !u!4 &183990986
 Transform:
   m_ObjectHideFlags: 0
@@ -746,6 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 0
   anim: {fileID: 307714178}
+  canPlay: 0
 --- !u!4 &279780676
 Transform:
   m_ObjectHideFlags: 0
@@ -1693,6 +1695,8 @@ MonoBehaviour:
   - keySprite: {fileID: 21300002, guid: c82b1a43e68dc3e43afe6c39a97c6238, type: 3}
     key: 276
   gameKeys: []
+  gameKeys2: []
+  gameKeys3: []
   player1Images:
   - {fileID: 990194608}
   - {fileID: 1030378028}
@@ -1726,7 +1730,7 @@ MonoBehaviour:
   cursor:
   - {fileID: 1431858591}
   - {fileID: 61450841}
-  canPlay: 0
+  canPlay: 0000
   restartButton: {fileID: 747305387}
 --- !u!4 &753982189
 Transform:

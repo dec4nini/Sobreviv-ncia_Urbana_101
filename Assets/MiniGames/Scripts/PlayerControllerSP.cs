@@ -34,7 +34,7 @@ public class PlayerControllerSP : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        if (id == 1)
+        if (id == 1 && LevelControllerSP.instance.canPlay == true)
         {
             if (Input.GetKeyDown(LevelControllerSP.instance.gameKeysSP[keyIndex].key))
             {
@@ -45,7 +45,7 @@ public class PlayerControllerSP : MonoBehaviour
                 timer += 0.1f;
             }
         }
-        else if (id == 2)
+        else if (id == 2 && LevelControllerSP.instance.canPlay == true)
         {
             if (Input.GetKeyDown(LevelControllerSP.instance.gameKeysSP2[keyIndex].key))
             {
@@ -55,7 +55,8 @@ public class PlayerControllerSP : MonoBehaviour
             {
                 timer += 0.1f;
             }
-        } else if(id == 3)
+        } 
+        else if(id == 3 && LevelControllerSP.instance.canPlay == true)
         {
             if (Input.GetKeyDown(LevelControllerSP.instance.gameKeysSP3[keyIndex].key))
             {
