@@ -90,7 +90,10 @@
     <Compile Include="Assets\Scripts\CreationMenu.cs" />
     <Compile Include="Assets\Scripts\NPC_Movement.cs" />
     <Compile Include="Assets\Scripts\OutfitChanger.cs" />
+    <Compile Include="Assets\Scripts\Parallax.cs" />
     <Compile Include="Assets\Scripts\Player_Movement.cs" />
+    <Compile Include="Assets\Scripts\SceneTransition.cs" />
+    <Compile Include="Assets\Scripts\VectorValue.cs" />
     <None Include="Assets\Samples\Cinemachine\2.6.5\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

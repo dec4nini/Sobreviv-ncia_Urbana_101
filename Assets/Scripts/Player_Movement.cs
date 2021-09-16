@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    public GameObject Play;
+    DontDestroyOnLoad (transform.Play);
     public float movespeed;
     private Rigidbody2D rb;
     private bool facingRight = true;

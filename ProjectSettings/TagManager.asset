@@ -13,13 +13,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Pessoas
+  - Pessoas2
+  - Cidade
+  - Fundo01
+  - Fundo02
+  - Fundo03
   - 
   - 
   - 
@@ -38,15 +38,33 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Player
-    uniqueID: 580524145
+  - name: Fundo3
+    uniqueID: 1026100777
     locked: 0
-  - name: Pessoas
-    uniqueID: 3522291155
+  - name: Fundo2
+    uniqueID: 1393452157
+    locked: 0
+  - name: Fundo1
+    uniqueID: 56838843
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Cidade
     uniqueID: 571056733
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Pessoas2
+    uniqueID: 2821424665
+    locked: 0
+  - name: Pessoas
+    uniqueID: 3522291155
+    locked: 0
+  - name: Player
+    uniqueID: 580524145
+    locked: 0
+  - name: Frente
+    uniqueID: 107138927
+    locked: 0
+  - name: UI
+    uniqueID: 306248331
     locked: 0
