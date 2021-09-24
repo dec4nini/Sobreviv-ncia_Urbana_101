@@ -31,9 +31,12 @@ public class PlayerControllerSP : MonoBehaviour
         {
             return;
         }
-
-        timer += Time.deltaTime;
-
+        if (LevelControllerSP.instance.canPlay == true || LevelControllerSP.instance.error == true) 
+        {
+            timer += Time.deltaTime;
+            LevelControllerSP.instance.UpdatePlayerTime(timer);
+        }
+        
         if (id == 1 && LevelControllerSP.instance.canPlay == true)
         {
             if (Input.GetKeyDown(LevelControllerSP.instance.gameKeysSP[keyIndex].key))
@@ -42,7 +45,7 @@ public class PlayerControllerSP : MonoBehaviour
             }
             else if (Input.anyKeyDown)
             {
-                timer += 0.1f;
+                LevelControllerSP.instance.ChamarMsgError();
             }
         }
         else if (id == 2 && LevelControllerSP.instance.canPlay == true)
@@ -53,7 +56,8 @@ public class PlayerControllerSP : MonoBehaviour
             }
             else if (Input.anyKeyDown)
             {
-                timer += 0.1f;
+
+                LevelControllerSP.instance.ChamarMsgError();
             }
         } 
         else if(id == 3 && LevelControllerSP.instance.canPlay == true)
@@ -64,7 +68,7 @@ public class PlayerControllerSP : MonoBehaviour
             }
             else if (Input.anyKeyDown)
             {
-                timer += 0.1f;
+                LevelControllerSP.instance.ChamarMsgError();
             }
         }
         
@@ -72,7 +76,7 @@ public class PlayerControllerSP : MonoBehaviour
 
     void keyPress()
     {
-        LevelControllerSP.instance.NextKey(0, keyIndex);
+        LevelControllerSP.instance.NextKey(0, keyIndex, id);
         keyIndex--;
 
         if (keyIndex < 0 && sequenciaNumero == 0)

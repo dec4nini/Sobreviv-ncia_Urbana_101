@@ -143,7 +143,6 @@ public class LevelController : MonoBehaviour
         messageText.text = "Go";
         StartCoroutine(Fading(messageText));
         canPlay[player] = true;
-        //PlayerController.instance.playBool(true, player);
     }
 
     IEnumerator Fading(Text text) 
