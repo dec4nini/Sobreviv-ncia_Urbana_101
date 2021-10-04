@@ -108,8 +108,5 @@ public class PlayerController : MonoBehaviour
         anim.SetTrigger(triggerAnimation);
     }
 
-    //public void playBool(bool play, int player) 
-    //{
-    //    canPlay[player] = play;
-    //}
+    
 }
