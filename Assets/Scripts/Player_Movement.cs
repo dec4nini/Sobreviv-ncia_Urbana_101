@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    public static Player_Movement instance;
     public float movespeed;
     private Rigidbody2D rb;
     private bool facingRight = true;
     private float moveDirection;
     private Animator anima;
     private string currentAnimation;
+    public bool canMove = true;
     //awake are only called when all objects are initialized
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anima = gameObject.GetComponent<Animator>();
-        anima.Play(PLAYER_IDLE);
+        instance = this;
+        if (canMove) 
+        {
+            rb = GetComponent<Rigidbody2D>();
+            anima = gameObject.GetComponent<Animator>();
+            anima.Play(PLAYER_IDLE);
+        }
     }
 
     //Animation States
@@ -25,12 +31,16 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Get inputs
-        ProcessInputs();
-        //Animate
-        Animate();
-        //Move
-        Move();
+        if (canMove) 
+        {
+            //Get inputs
+            ProcessInputs();
+            //Animate
+            Animate();
+            //Move
+            Move();
+        }
+        
     }
     
     private void Move()
