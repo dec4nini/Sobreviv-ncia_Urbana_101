@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPC_Movement : MonoBehaviour
 {
+    public static NPC_Movement instance;
     public float decisionTimeCount = 0;
     public int randomDirection;
     public float movespeed;
@@ -12,13 +13,18 @@ public class NPC_Movement : MonoBehaviour
     private float moveDirection;
     private Animator anima;
     private string currentAnimation;
+    public bool canMove = true;
     //awake are only called when all objects are initialized
     private void Awake()
     {
-        decisionTimeCount = Random.Range(4, 7);
-        rb = GetComponent<Rigidbody2D>();
-        anima = gameObject.GetComponent<Animator>();
-        anima.Play(PLAYER_IDLE);
+        instance = this;
+        if (canMove == true) 
+        {
+            decisionTimeCount = Random.Range(4, 7);
+            rb = GetComponent<Rigidbody2D>();
+            anima = gameObject.GetComponent<Animator>();
+            anima.Play(PLAYER_IDLE);
+        }
     }
 
     //Animation States
@@ -28,12 +34,15 @@ public class NPC_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Get inputs
-        ProcessInputs();
-        //Animate
-        Animate();
-        //Move
-        Move();
+        if (canMove == true) 
+        {
+            //Get inputs
+            ProcessInputs();
+            //Animate
+            Animate();
+            //Move
+            Move();
+        }
     }
 
     private void Move()

@@ -47,8 +47,6 @@ public class LevelControllerSP : MonoBehaviour
     public Color newColor;
     public Color newColor2;
 
-    private IEnumerator coroutineRef;
-
     public int positionX;
     private void Awake()
     {
@@ -274,6 +272,7 @@ public class LevelControllerSP : MonoBehaviour
     }
     public void RestartScene()
     {
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        
     }
 }
