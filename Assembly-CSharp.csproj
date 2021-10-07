@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DE1FA680-7E32-D5A5-84A6-683E4B4394A7}</ProjectGuid>
+    <ProjectGuid>{FD6DBC64-5F4F-FDB0-5E85-28906B1CBF7F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -88,7 +88,10 @@
     <Compile Include="Assets\Scripts\MiniGameController.cs" />
     <Compile Include="Assets\Scripts\NPC_Movement.cs" />
     <Compile Include="Assets\Scripts\OutfitChanger.cs" />
+    <Compile Include="Assets\Scripts\Parallax.cs" />
     <Compile Include="Assets\Scripts\Player_Movement.cs" />
+    <Compile Include="Assets\Scripts\SceneTransition.cs" />
+    <Compile Include="Assets\Scripts\VectorValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Samples\Cinemachine\2.6.5\Cinemachine Example Scenes\Scenes\Anywhere Door\ScreenCutoutShader.shader" />
@@ -276,6 +279,12 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

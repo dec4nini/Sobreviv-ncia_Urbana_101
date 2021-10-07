@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Time.time > nextkeyTime) 
             {
-                nextkeyTime = Time.time + Random.Range(0.4f , 0.6f);
+                nextkeyTime = Time.time + Random.Range(0.25f , 0.5f);
                 keyPress();
             }
             return; 
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.anyKeyDown)
             {
-                LevelController.instance.ChamarMsgError();
+                timer += 0.1f;
             }
         } 
         else if (numSeq == 2 && LevelController.instance.canPlay[playerIndex] == true) 
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.anyKeyDown)
             {
-                LevelController.instance.ChamarMsgError();
+                timer += 0.1f;
             }
         }
         else if (numSeq == 3 && LevelController.instance.canPlay[playerIndex] == true)
@@ -78,14 +78,14 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.anyKeyDown)
             {
-                LevelController.instance.ChamarMsgError();
+                timer += 0.1f;
             }
         }
     }
 
     void keyPress() 
     {
-        LevelController.instance.NextKey(playerIndex, keyIndex, numSeq);
+        LevelController.instance.NextKey(playerIndex, keyIndex);
         keyIndex--;
 
         if (keyIndex < 0 && sequencia == 0)
@@ -108,5 +108,8 @@ public class PlayerController : MonoBehaviour
         anim.SetTrigger(triggerAnimation);
     }
 
-    
+    //public void playBool(bool play, int player) 
+    //{
+    //    canPlay[player] = play;
+    //}
 }

@@ -25,27 +25,24 @@ public class LevelControllerSP : MonoBehaviour
     public Image[] player1Images;
 
     public Text messageText;
-    public Text messageFinalGame;
-    public GameObject messageFinalGameGB;
 
     public RectTransform messageErrorPosition;
     public Text messageError;
     public GameObject messageErrorGB;
 
     public Text playerTimeText;
-    public Text limiteTimeText;
     public float playerTime;
     private float timer = 0;
-    public float limiteTime;
 
     public PlayerControllerSP playerSP;
 
     public bool canPlay = false;
     public bool error = false;
-    public bool finalGame = false;
 
     public Color newColor;
     public Color newColor2;
+
+    private IEnumerator coroutineRef;
 
     public int positionX;
     private void Awake()
@@ -59,8 +56,6 @@ public class LevelControllerSP : MonoBehaviour
         newColor = messageError.color;
         newColor2 = messageError.color;
         StartCoroutine(StartingKeys(1));
-        messageFinalGameGB.SetActive(false);
-        limiteTimeText.text = "Tempo Limite: " + limiteTime.ToString();
     }
 
     // Update is called once per frame
@@ -239,40 +234,13 @@ public class LevelControllerSP : MonoBehaviour
     {
         playerTime = time;
 
-        playerTimeText.text = playerTime.ToString("0.00") + "s";
-        
-        if (playerTime < limiteTime)
+        if (playerTime > 0)
         {
-            if (finalGame)
-            {
-                messageFinalGameGB.SetActive(true);
-                messageFinalGame.text = "Parabens, Tarefa Concluida com sucesso";
-            }
-            else 
-            {
-                playerTimeText.color = Color.green;
-            }
-                
+            playerTimeText.text = playerTime.ToString("0.00") + "s";
         }
-        else
-        {
-            if (finalGame)
-            {
-                messageFinalGameGB.SetActive(true);
-                messageFinalGame.text = "Não foi dessa vez, tente de novo";
-            }
-            else 
-            {
-                playerTimeText.color = Color.red;
-            }
-        }
-        
-        
-        
     }
     public void RestartScene()
     {
-        //SceneManager.LoadScene(0);
-        
+        SceneManager.LoadScene(0);
     }
 }

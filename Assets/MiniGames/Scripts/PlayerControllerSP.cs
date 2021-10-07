@@ -82,7 +82,6 @@ public class PlayerControllerSP : MonoBehaviour
         if (keyIndex < 0 && sequenciaNumero == 0)
         {
             canPlay = false;
-            LevelControllerSP.instance.finalGame = true;
             LevelControllerSP.instance.UpdatePlayerTime(timer);
         }
         else if (keyIndex < 0)

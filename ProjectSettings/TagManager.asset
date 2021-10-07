@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -38,15 +39,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Player
-    uniqueID: 580524145
+  - name: Ceu
+    uniqueID: 3009839237
     locked: 0
-  - name: Pessoas
-    uniqueID: 3522291155
+  - name: Nuvens
+    uniqueID: 1791870835
+    locked: 0
+  - name: Predios
+    uniqueID: 718203915
     locked: 0
   - name: Cidade
     uniqueID: 571056733
     locked: 0
+  - name: Pessoas
+    uniqueID: 3522291155
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 580524145
+    locked: 0
+  - name: Frente
+    uniqueID: 4212063213
     locked: 0
