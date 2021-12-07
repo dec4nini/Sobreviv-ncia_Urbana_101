@@ -22,6 +22,11 @@ public class Player_Movement : MonoBehaviour
             anima = gameObject.GetComponent<Animator>();
             anima.Play(PLAYER_IDLE);
         }
+        else
+        {
+            rb.velocity = new Vector2(0, 0);
+            anima.Play(PLAYER_IDLE);
+        }
     }
 
     //Animation States

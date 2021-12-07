@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MiniGameController : MonoBehaviour
 {
     public static MiniGameController instance;
     public GameObject[] miniGames;
-    public GameObject game;
-    public GameObject buttomFinal;
+    public Button buttomFinal;
+    public int miniGameId;
+
+    private GameObject game;
     // Start is called before the first frame update
 
     private void Awake()
@@ -16,7 +19,7 @@ public class MiniGameController : MonoBehaviour
     }
     void Start()
     {
-        game = Instantiate(miniGames[0], new Vector3(0, 0, 0), Quaternion.identity);
+        //buttomFinal.onClick.AddListener(delegate() { LevelControllerSP.instance.RestartScene(); });
     }
 
 
@@ -26,11 +29,34 @@ public class MiniGameController : MonoBehaviour
     {
         
     }
-
-    public void destroyMiniGame() 
+    public void createMiniGame() 
     {
-        Destroy(game);
-        NPC_Movement.instance.canMove = true;
-        Player_Movement.instance.canMove = true;
+        NPC_Movement.instance.canMove = false;
+        Player_Movement.instance.canMove = false;
+        game = Instantiate(miniGames[miniGameId], new Vector3(0, 0, 0), Quaternion.identity);
+    }
+
+    public void destroyMiniGame(bool tutorial, bool vitoria) 
+    {
+        if (tutorial)
+        {
+            if (vitoria)
+            {
+                Destroy(game);
+                NPC_Movement.instance.canMove = true;
+                Player_Movement.instance.canMove = true;
+            }
+            else
+            {
+                Destroy(game);
+                createMiniGame();
+            }
+        }
+        else 
+        {
+            Destroy(game);
+            NPC_Movement.instance.canMove = true;
+            Player_Movement.instance.canMove = true;
+        }
     }
 }

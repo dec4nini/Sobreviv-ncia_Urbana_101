@@ -285,17 +285,25 @@ MonoBehaviour:
   - {fileID: 158896771}
   - {fileID: 1872929251}
   messageText: {fileID: 898430393}
+  messageFinalGame: {fileID: 0}
+  messageFinalGameGB: {fileID: 0}
   messageErrorPosition: {fileID: 1250402299}
   messageError: {fileID: 1250402301}
   messageErrorGB: {fileID: 1250402298}
   playerTimeText: {fileID: 582510306}
+  limiteTimeText: {fileID: 0}
   playerTime: 0
+  limiteTime: 0
   playerSP: {fileID: 1769090208}
   canPlay: 0
   error: 0
+  finalGame: 0
+  vitoria: 0
   newColor: {r: 0, g: 0, b: 0, a: 0}
   newColor2: {r: 0, g: 0, b: 0, a: 0}
   positionX: 80
+  restartButton: {fileID: 0}
+  restartButtonText: {fileID: 0}
 --- !u!1 &107379653
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &107379654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -392,7 +400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &117488381
 Transform:
   m_ObjectHideFlags: 0
@@ -1795,7 +1803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &471968377
 Transform:
   m_ObjectHideFlags: 0
@@ -2277,17 +2285,25 @@ MonoBehaviour:
   - {fileID: 219213940}
   - {fileID: 1177729180}
   messageText: {fileID: 1297576886}
+  messageFinalGame: {fileID: 0}
+  messageFinalGameGB: {fileID: 0}
   messageErrorPosition: {fileID: 5477231}
   messageError: {fileID: 5477233}
   messageErrorGB: {fileID: 5477230}
   playerTimeText: {fileID: 581181356}
+  limiteTimeText: {fileID: 0}
   playerTime: 0
+  limiteTime: 0
   playerSP: {fileID: 279780675}
   canPlay: 0
   error: 0
+  finalGame: 0
+  vitoria: 0
   newColor: {r: 0, g: 0, b: 0, a: 0}
   newColor2: {r: 0, g: 0, b: 0, a: 0}
   positionX: 100
+  restartButton: {fileID: 0}
+  restartButtonText: {fileID: 0}
 --- !u!4 &566898100
 Transform:
   m_ObjectHideFlags: 0
@@ -2725,17 +2741,25 @@ MonoBehaviour:
   - {fileID: 1078466543}
   - {fileID: 337354622}
   messageText: {fileID: 517853628}
+  messageFinalGame: {fileID: 0}
+  messageFinalGameGB: {fileID: 0}
   messageErrorPosition: {fileID: 1530553965}
   messageError: {fileID: 1530553967}
   messageErrorGB: {fileID: 1530553964}
   playerTimeText: {fileID: 1221237090}
+  limiteTimeText: {fileID: 0}
   playerTime: 0
+  limiteTime: 0
   playerSP: {fileID: 1075359183}
   canPlay: 0
   error: 0
+  finalGame: 0
+  vitoria: 0
   newColor: {r: 0, g: 0, b: 0, a: 0}
   newColor2: {r: 0, g: 0, b: 0, a: 0}
   positionX: 100
+  restartButton: {fileID: 0}
+  restartButtonText: {fileID: 0}
 --- !u!1 &668403357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3144,7 +3168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &790578062
 Transform:
   m_ObjectHideFlags: 0
@@ -3639,6 +3663,75 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1001 &951259345
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5978578095962167116, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_Name
+      value: Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 352
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 198
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978578095962167117, guid: e070e0955a82b1c429ff40c592e39c08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e070e0955a82b1c429ff40c592e39c08, type: 3}
 --- !u!1 &955334488
 GameObject:
   m_ObjectHideFlags: 0
@@ -5440,7 +5533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1429895345
 Transform:
   m_ObjectHideFlags: 0
@@ -7378,17 +7471,25 @@ MonoBehaviour:
   - {fileID: 1492295306}
   - {fileID: 1386503371}
   messageText: {fileID: 239051279}
+  messageFinalGame: {fileID: 0}
+  messageFinalGameGB: {fileID: 0}
   messageErrorPosition: {fileID: 1465018149}
   messageError: {fileID: 1465018151}
   messageErrorGB: {fileID: 1465018148}
   playerTimeText: {fileID: 783511407}
+  limiteTimeText: {fileID: 0}
   playerTime: 0
+  limiteTime: 0
   playerSP: {fileID: 1667423424}
   canPlay: 0
   error: 0
+  finalGame: 0
+  vitoria: 0
   newColor: {r: 0, g: 0, b: 0, a: 0}
   newColor2: {r: 0, g: 0, b: 0, a: 0}
   positionX: 100
+  restartButton: {fileID: 0}
+  restartButtonText: {fileID: 0}
 --- !u!1 &2078507090
 GameObject:
   m_ObjectHideFlags: 0
